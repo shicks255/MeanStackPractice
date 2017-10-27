@@ -3,7 +3,9 @@
 <head>
 
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
-    <script src="app.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/controllers.js"></script>
+    <script src="js/services.js"></script>
 
 </head>
 <body>
@@ -15,6 +17,27 @@
 
         <p>
             {{name}}
+
+            {{balls}}
+
+            <table>
+                <tr ng-repeat="song in artists">
+                    <td ng-bind="song.name"></td>
+                    <td ng-bind="song.playcount"></td>
+                    <td ng-bind="song.url"></td>
+                </tr>
+                
+            </table> 
+
+            <table>
+                    <tr ng-repeat="quote in quotes">
+                        <td ng-bind="quote.name"></td>
+                        <td ng-bind="quote.quote"></td>
+                        <!--<td>{{ quote.name }}</td>
+                        <td>{{ quote.quote }}</td>-->
+                    </tr>
+                </table>
+
         </p>
 
     </div>
