@@ -1,0 +1,25 @@
+{
+  "name": "angular_test",
+  "version": "1.0.0",
+  "description": "Testing a simple angular static webpage",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shicks255/MeanStackPractice.git"
+  },
+  "author": "Steven M. Hicks",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shicks255/MeanStackPractice/issues"
+  },
+  "homepage": "https://github.com/shicks255/MeanStackPractice#readme",
+  "dependencies": {
+    "underscore": "^1.8.3"
+  },
+  "devDependencies": {
+    "webpack": "^3.8.1"
+  }
+}
