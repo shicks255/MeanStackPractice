@@ -13,33 +13,25 @@
     Hi everyone, this is an angular test
 
     <div ng-app="myApp" ng-controller="controller">
-        <input type="text" ng-model="name">
+        <label for="textFilter">Filter Results:</label>
+        <input type="text" ng-model="textFilter" id="textFilter" name="textFilter">
+        <table>
 
-        <p>
-            {{name}}
+            <tr>
+                <thead>
+                    <th>Play count</th>
+                    <th style="text-align: left">Song Name</th>
+                    <th style="text-align: left">Artist</th>
+                </thead>
+            </tr>
 
-            {{balls}}
-
-            <table>
-
-                <tr>
-                    <thead>
-                        <th>Play count</th>
-                        <th style="text-align: left">Song Name</th>
-                        <th style="text-align: left">Artist</th>
-                    </thead>
-                </tr>
-
-                <tr ng-repeat="song in topTracks">
-                    <td ng-bind="song.playcount"></td>
-                    <td ng-bind="song.name"></td>
-                    <td ng-bind="song.artist.name"></td>
-                </tr>
+            <tr ng-repeat="song in topTracks | filter:searchFilter">
+                <td ng-bind="song.playcount"></td>
+                <td ng-bind="song.name"></td>
+                <td ng-bind="song.artist.name"></td>
+            </tr>
                 
-            </table> 
-
-        </p>
-
+        </table> 
     </div>
 
 </body>
