@@ -4,9 +4,23 @@ angular.module('myApp.controllers', [])
     $scope.balls = 'balls';
     $scope.artists = ["billy"];
 
-    lastFmAPIservice.getArtists().then(function(response)
+    lastFmAPIservice.getTracks().then(function(response)
     {
         console.log(response.data.toptracks.track);
-        $scope.artists = response.data.toptracks.track;
+        $scope.topTracks = response.data.toptracks.track;
     });
+
+    lastFmAPIservice.getArtists().then(function(response)
+    {
+        console.log(response.data);
+        $scope.topArtists = response.data;
+    });
+
+    lastFmAPIservice.getAlbums().then(function(response)
+    {
+        console.log(response.data);
+        $scope.topAlbums = response.data;
+    });
+
+
 });
