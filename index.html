@@ -20,6 +20,7 @@
 
             <tr>
                 <thead>
+                    <th>Rank</th>
                     <th>Play count</th>
                     <th style="text-align: left">Song Name</th>
                     <th style="text-align: left">Artist</th>
@@ -27,6 +28,7 @@
             </tr>
 
             <tr ng-repeat="song in topTracks | filter:searchFilter">
+                <td ng-bind="song.rank"></td>
                 <td ng-bind="song.playcount"></td>
                 <td ng-bind="song.name"></td>
                 <td ng-bind="song.artist.name"></td>

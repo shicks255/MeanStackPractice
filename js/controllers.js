@@ -5,7 +5,7 @@ angular.module('myApp.controllers', [])
     $scope.searchFilter = function(song)
     {
         var keyword = new RegExp($scope.textFilter, 'i');
-        console.log(keyword.test(song.name));
+        console.log(song);
         return !$scope.textFilter || keyword.test(song.name) || keyword.test(song.artist.name) || keyword.test(song.playcount);
     }
 
