@@ -7,7 +7,7 @@ angular.module('myApp.services', [])
     {
         return $http({
             method: 'JSONP',
-            url: 'https://ws.audioscrobbler.com/2.0/?method=user.gettoptracks&user=shicks255&api_key=c349ab1fcb6b132ffb8d842e982458db&limit=500&format=json'
+            url: 'https://ws.audioscrobbler.com/2.0/?method=user.gettoptracks&user=shicks255&api_key=c349ab1fcb6b132ffb8d842e982458db&limit=5000&format=json'
         });
     }
 
